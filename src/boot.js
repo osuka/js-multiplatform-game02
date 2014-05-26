@@ -1,4 +1,4 @@
-/* globals cc, JSB */
+/* globals cc */
 (function () {
   'use strict';
 
@@ -29,7 +29,7 @@
       }, this);
       /*jshint camelcase: true */
     };
-    cc.game.run();
+    // cc.game.run();
 
     // var Cocos2dWebApp = cc.Application.extend({
   
@@ -73,21 +73,31 @@
     // that is not browser or webview-based
 
     // This is an example of exporting (binding) a C++ function to Javascript
-    var testJSB = new JSB.JSBinding();
-    testJSB.retain(); // don't want Spidermonkey to garbage collect this
-    testJSB.functionTest();
+    // var testJSB = new JSB.JSBinding();
+    // testJSB.retain(); // don't want Spidermonkey to garbage collect this
+    // testJSB.functionTest();
 
-    // Export Device's getDPI function
-    if (typeof cc.Device === 'undefined' ||
-      typeof cc.Device.getDPI === 'undefined') {
-      cc.Device = {};
-      cc.Device.getDPI = function () {
-        return testJSB.getDPI();
-      };
-    }
+    // // Export Device's getDPI function
+    // if (typeof cc.Device === 'undefined' ||
+    //   typeof cc.Device.getDPI === 'undefined') {
+    //   cc.Device = {};
+    //   cc.Device.getDPI = function () {
+    //     return testJSB.getDPI();
+    //   };
+    // }
 
-    cc.dumpConfig();
+    // cc.dumpConfig();
  
-    GameController.boot();
+    cc.game.onStart = function () {
+      cc.view.setDesignResolutionSize(800, 450, cc.ResolutionPolicy.SHOW_ALL);
+      cc.view.resizeWithBrowserSize(true);
+      //load resources
+      /*jshint camelcase: false */
+      cc.LoaderScene.preload(Resources, function () {
+        GameController.boot();
+      }, this);
+      /*jshint camelcase: true */
+    };
+    cc.game.run();
   }
 })();

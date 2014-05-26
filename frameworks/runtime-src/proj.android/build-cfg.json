@@ -7,8 +7,8 @@
     ],
     "copy_resources": [
         {
-            "from": "../../../src",
-            "to": "src"
+            "from": "../../../dist/bundled-scripts.js",
+            "to": ""
         },
         {
             "from": "../../../res",
