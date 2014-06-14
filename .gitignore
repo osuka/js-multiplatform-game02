@@ -9,6 +9,9 @@ log/*.log
 tmp/
 .sass-cache/
 *.$$$
+
+# ios
+frameworks/runtime-src/proj.ios_mac/js-multiplatform-game02.xcodeproj/project.xcworkspace
 xcuserdata/
 runtime/
 

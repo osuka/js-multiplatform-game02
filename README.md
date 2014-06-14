@@ -66,6 +66,29 @@ After this, the structure will look something like:
 - project.json
 ```
 
+- Manually copy jsbinding files from cocos2d-x: (not entirely sure way these were not copied to begin with)
+
+```
+cd js-multiplatform-game02/frameworks/js-bindings/cocos2d-x/plugin
+cp -r ~/Downloads/cocos2d-x-3.1.1/plugin/jsbindings/manual/* jsbindings/manual/
+cp -r ~/Downloads/cocos2d-x-3.1.1/plugin/jsbindings/auto/* jsbindings/auto/
+cp -r ~/Downloads/cocos2d-x-3.1.1/plugin/protocols/* protocols/
+```
+
+- Manually update iOS project paths:
+
+Add to js-multiplatform-game02.xcodeproj, TARGET js-multiplatform-game02 iOS, on 
+"User Header Search Paths":
+
+```
+$(SRCROOT)/../../js-bindings/cocos2d-x/cocos/platform/ios
+```
+
+- Manually update Resource iOS project:
+
+- Add a reference (don't copy!) to jsb_ext_create_apis.js to "JS Common".
+- Add a reference to bundled_scripts.js to "JS Common". 
+- Add both jsb_ext_create_api.js and bundled_scripts.js to the "Copy Bundle Resources" section, for iOS & Mac.
 
 
 

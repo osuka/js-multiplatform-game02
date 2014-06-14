@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19485730194CD9490032B168 /* jsb_ext_create_apis.js in Sources */ = {isa = PBXBuildFile; fileRef = 1948572F194CD9490032B168 /* jsb_ext_create_apis.js */; };
+		19485731194CD9490032B168 /* jsb_ext_create_apis.js in Sources */ = {isa = PBXBuildFile; fileRef = 1948572F194CD9490032B168 /* jsb_ext_create_apis.js */; };
+		19485733194CD9610032B168 /* bundled-scripts.js in Sources */ = {isa = PBXBuildFile; fileRef = 19485732194CD9610032B168 /* bundled-scripts.js */; };
+		19485734194CD9610032B168 /* bundled-scripts.js in Sources */ = {isa = PBXBuildFile; fileRef = 19485732194CD9610032B168 /* bundled-scripts.js */; };
+		19485735194CD9770032B168 /* bundled-scripts.js in Resources */ = {isa = PBXBuildFile; fileRef = 19485732194CD9610032B168 /* bundled-scripts.js */; };
+		19485736194CD9770032B168 /* jsb_ext_create_apis.js in Resources */ = {isa = PBXBuildFile; fileRef = 1948572F194CD9490032B168 /* jsb_ext_create_apis.js */; };
 		1A676829180E9C060076BC67 /* libchipmunk Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB4C180E9ACB004C840B /* libchipmunk Mac.a */; };
 		1A67682A180E9C060076BC67 /* libcocos2dx Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB48180E9ACB004C840B /* libcocos2dx Mac.a */; };
 		1A67682B180E9C060076BC67 /* libcocos2dx-extensions Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB4A180E9ACB004C840B /* libcocos2dx-extensions Mac.a */; };
@@ -269,6 +275,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1948572F194CD9490032B168 /* jsb_ext_create_apis.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jsb_ext_create_apis.js; path = "../../js-bindings/bindings/script/jsb_ext_create_apis.js"; sourceTree = "<group>"; };
+		19485732194CD9610032B168 /* bundled-scripts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "bundled-scripts.js"; path = "../../../dist/bundled-scripts.js"; sourceTree = "<group>"; };
 		1A1A081B18C9DF05005C6854 /* project.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = project.json; path = ../../../project.json; sourceTree = "<group>"; };
 		1A6BF21418C9DB5900FB0E1C /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = main.js; path = ../../../main.js; sourceTree = "<group>"; };
 		1A82F5FA169AC92500C4B13A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -512,6 +520,8 @@
 		C06D18B718C02D4A003D1A65 /* JS Common */ = {
 			isa = PBXGroup;
 			children = (
+				19485732194CD9610032B168 /* bundled-scripts.js */,
+				1948572F194CD9490032B168 /* jsb_ext_create_apis.js */,
 				C0F9A19C18C6D1FB00C75ABD /* debugger */,
 				C0F9A1AC18C6D1FC00C75ABD /* jsb.js */,
 				1AC34A0D18C99CA5007834C9 /* jsb_boot.js */,
@@ -584,7 +594,7 @@
 				1A676826180E9BF70076BC67 /* PBXTargetDependency */,
 			);
 			name = "js-multiplatform-game02 Mac";
-			productName = js-multiplatform-game02;
+			productName = "js-multiplatform-game02";
 			productReference = 509D4AAA17EBB24E00697056 /* js-multiplatform-game02 Mac.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -606,7 +616,7 @@
 				1A676835180E9C110076BC67 /* PBXTargetDependency */,
 			);
 			name = "js-multiplatform-game02 iOS";
-			productName = js-multiplatform-game02;
+			productName = "js-multiplatform-game02";
 			productReference = A922753D1517C094001B78AA /* js-multiplatform-game02 iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -774,6 +784,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19485735194CD9770032B168 /* bundled-scripts.js in Resources */,
+				19485736194CD9770032B168 /* jsb_ext_create_apis.js in Resources */,
 				1AE159EC18C9DF3600FCA372 /* project.json in Resources */,
 				1AD7E0A818C9DB93004817A6 /* main.js in Resources */,
 				1AC34A1618C99CCC007834C9 /* jsb_boot.js in Resources */,
@@ -825,6 +837,8 @@
 			files = (
 				509D4A8117EBB24E00697056 /* AppDelegate.cpp in Sources */,
 				C06E23CC18CEFE680093C81A /* main.cpp in Sources */,
+				19485731194CD9490032B168 /* jsb_ext_create_apis.js in Sources */,
+				19485734194CD9610032B168 /* bundled-scripts.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,6 +850,8 @@
 				D4545227156E28EF00887EB5 /* AppDelegate.cpp in Sources */,
 				509D4AC817EBB2AB00697056 /* main.m in Sources */,
 				509D4ABC17EBB2AB00697056 /* AppController.mm in Sources */,
+				19485730194CD9490032B168 /* jsb_ext_create_apis.js in Sources */,
+				19485733194CD9610032B168 /* bundled-scripts.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1006,7 +1022,7 @@
 				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../js-bindings/cocos2d-x/cocos/2d/platform/ios $(SRCROOT)/../../js-bindings/external/spidermonkey/include/ios";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../js-bindings/cocos2d-x/cocos/2d/platform/ios $(SRCROOT)/../../js-bindings/external/spidermonkey/include/ios $(SRCROOT)/../../js-bindings/cocos2d-x/cocos/platform/ios";
 			};
 			name = Debug;
 		};
@@ -1029,7 +1045,7 @@
 				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../js-bindings/cocos2d-x/cocos/2d/platform/ios $(SRCROOT)/../../js-bindings/external/spidermonkey/include/ios";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../js-bindings/cocos2d-x/cocos/2d/platform/ios $(SRCROOT)/../../js-bindings/external/spidermonkey/include/ios $(SRCROOT)/../../js-bindings/cocos2d-x/cocos/platform/ios";
 			};
 			name = Release;
 		};
