@@ -36,31 +36,6 @@
       this.touchListener = cc.EventListener.create({
         event: cc.EventListener.TOUCH_ONE_BY_ONE,
         swallowTouches: true,
-        // onTouchBegan: function (touch, event) {
-        //   cc.log('menuLayer: touch start');
-        //   var target = event.getCurrentTarget();
-        //   //Get the position of the current point relative to the button
-        //   var locationInNode =
-        //     target.convertToNodeSpace(touch.getLocation());
-        //   var s = target.getContentSize();
-        //   var rect = cc.rect(0, 0, s.width, s.height);
-        //   //Check the click area
-        //   if (cc.rectContainsPoint(rect, locationInNode)) {
-        //     cc.log('sprite began... x = ' + locationInNode.x + ', y = ' +
-        //       locationInNode.y);
-        //     target.opacity = 180;
-        //     return true;
-        //   }
-        //   return false;
-        // },
-        // onTouchMoved: function (touch, event) {
-        //   cc.log('menuLayer: touch moved');
-        //   var target = event.getCurrentTarget();
-        //   var delta = touch.getDelta();
-        //   target.x += delta.x;
-        //   target.y += delta.y;
-        //   return true;
-        // },
         onTouchBegan: function (touch, event) {
           cc.log('menuLayer: touch start');
           var target = event.getCurrentTarget();

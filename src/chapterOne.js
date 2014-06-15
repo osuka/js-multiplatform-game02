@@ -809,10 +809,12 @@
       newPos.y = Math.min(newPos.y, 0);
       newPos.y = Math.max(newPos.y, topY);
       if (ScreenDimensions.viewportSize.width > totalWidth) {
-        newPos.x = (ScreenDimensions.viewportSize.width - totalWidth) / 2;
+        newPos.x = Math.floor((ScreenDimensions.viewportSize.width -
+          totalWidth) / 2);
       }
       if (ScreenDimensions.viewportSize.height > totalHeight) {
-        newPos.y = (ScreenDimensions.viewportSize.height - totalHeight) / 2;
+        newPos.y = Math.floor((ScreenDimensions.viewportSize.height -
+          totalHeight) / 2);
       }
 
       // newPos.x = Math.floor(newPos.x);
@@ -823,7 +825,8 @@
       // function sign(x) { return x > 0 ? 1 : x < 0 ? -1 : 0; }
       var padPos = this._getPadPos();
       var gameArea = this._getGameArea();
-      var newPos = cc.p(gameArea.getPositionX(), gameArea.getPositionY());
+      var newPos = cc.p(Math.floor(gameArea.getPositionX()),
+        Math.floor(gameArea.getPositionY()));
 
       if (Math.abs(padPos.y) >= 1) {
         newPos.y -= padPos.y;
