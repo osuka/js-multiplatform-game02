@@ -26,7 +26,9 @@ module.exports = function (grunt) {
       webhome: '.',
       bower: './bower_components',
       test: 'test',
-      tmp: '.tmp'
+      tmp: '.tmp',
+      androidassets: 'frameworks/runtime-src/proj.android/assets',
+      bindingssrc: 'frameworks/js-bindings/bindings/script'
     },
 
     properties: grunt.file.isFile('grunt.local.json') ?
@@ -145,15 +147,6 @@ module.exports = function (grunt) {
     },
 
     shell: {
-      buildnative: {
-        command: 'python build_native.py',
-        options: {
-          stdout: true,
-          execOptions: {
-            cwd: 'proj.android'
-          }
-        }
-      }
     },
 
     copy: {
@@ -198,6 +191,35 @@ module.exports = function (grunt) {
           ]
         }
         ]
+      },
+      androidassets: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= paths.bindingssrc %>',
+          dest: '<%= paths.androidassets %>',
+          src: [
+            '**/*.js',
+          ]
+        }, {
+          expand: true,
+          dot: true,
+          cwd: '<%= paths.dist %>',
+          dest: '<%= paths.androidassets %>',
+          src: [
+            '**/*.js',
+            '**/*.json'
+          ]
+        }, {
+          expand: true,
+          dot: true,
+          cwd: '<%= paths.webhome %>',
+          dest: '<%= paths.androidassets %>',
+          src: [
+            'project.json'
+          ]
+        }
+        ]
       }
     }
 
@@ -214,7 +236,7 @@ module.exports = function (grunt) {
     } else if (target === 'android') {
       grunt.task.run([
         'build:html5',
-        'shell:buildnative'
+        'copy:androidassets'
       ]);
     } else if (target === 'ios') {
       grunt.task.run([

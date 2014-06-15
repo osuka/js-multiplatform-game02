@@ -25,20 +25,10 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
-		<buildCommand>
-			<name>org.eclipse.cdt.managedbuilder.core.ScannerConfigBuilder</name>
-			<triggers>full,incremental,</triggers>
-			<arguments>
-			</arguments>
-		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>com.android.ide.eclipse.adt.AndroidNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
-		<nature>org.eclipse.cdt.core.cnature</nature>
-		<nature>org.eclipse.cdt.core.ccnature</nature>
-		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
-		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
 	<linkedResources>
 		<link>
@@ -57,14 +47,14 @@
 			<locationURI>COCOS2DX/extensions</locationURI>
 		</link>
 		<link>
+			<name>jsjavabridge</name>
+			<type>2</type>
+			<locationURI>js-bindings/bindings/manual/platform/android/java/src</locationURI>
+		</link>
+		<link>
 			<name>scripting</name>
 			<type>2</type>
 			<locationURI>COCOS2DX/scripting</locationURI>
-		</link>
-		<link>
-			<name>jsjavabridge</name>
-			<type>2</type>
-			<location>../../js-bindings/bindings/manual/platform/android/java/src</location>
 		</link>
 	</linkedResources>
 </projectDescription>

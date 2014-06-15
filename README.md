@@ -56,21 +56,33 @@ grunt server
 # Launching the XCode (iOS, Mac) version
 
 * Build the game using `grunt build:ios`
-* Open `frameworks/runtime-src/proj.ios\_mac/js-multiplatform-game02.xcodeproj`.
+* Open `frameworks/runtime-src/proj.ios_mac/js-multiplatform-game02.xcodeproj`.
 
 Launch as usual.
 
 # Launching the Android version
 
 * Make sure you have a `python` interpreter available.
-* Make sure Android SDK and Android NDK are installed, and that `ANDROID\_SDK\_ROOT` and `NDK\_ROOT` are defined.
-* Build the game using `grunt build:android`
-* If using Eclipse:
-  * Import `frameworks/cocos2d-x/cocos/2d` into your IDE. This will create the project `libcocos2dx`.
-  * Import `proj.android` into your IDE. This will create the `js-multiplatform-game02` project.
-  * Launch as Android Application from the IDE.
+* Make sure Android SDK and Android NDK are installed, and that `ANDROID_SDK_ROOT` and `NDK_ROOT` are defined.
+* If using Eclipse, first time do:
+  * Import `js-multiplatform-game02/frameworks/js-bindings/cocos2d-x/cocos/platform/android/java` into your IDE. This will create the project `libcocos3dx`.
+  * Import `js-multiplatform-game02/frameworks/runtime-src/proj.android` into your IDE. This will create the `js-multiplatform-game02` project.
+  * Exit Eclipse, open `js-multiplatform-game02/frameworks/runtime-src/proj.android/.project` and remove:
+```
+<nature>org.eclipse.cdt.core.cnature</nature>
+<nature>org.eclipse.cdt.core.ccnature</nature>
+<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+```
+  * Remove `js-multiplatform-game02/frameworks/runtime-src/proj.android/.cproject` if present
+
+(this is because Eclipse automatically adds c-nature to projects but we will be compiling via command line)
+
+* Then: 
+  * Build the game using `grunt build:android`
+  * Right click on `js-multiplatform-game02` an "Run as" Android Application from the IDE.
 * Of if you just want to use the command line
-  * Install on a device using `ant -Dsdk.dir=${ANDROID\_SDK\_ROOT} debug install` (needs `ant`)
+  * Install on a device using `ant -Dsdk.dir=${ANDROID_SDK_ROOT} debug install` (needs `ant`)
 
 Optionally, choose the desired supported Android OS versions in properties for both projects.
 
