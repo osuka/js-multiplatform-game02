@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		19485730194CD9490032B168 /* jsb_ext_create_apis.js in Sources */ = {isa = PBXBuildFile; fileRef = 1948572F194CD9490032B168 /* jsb_ext_create_apis.js */; };
-		19485731194CD9490032B168 /* jsb_ext_create_apis.js in Sources */ = {isa = PBXBuildFile; fileRef = 1948572F194CD9490032B168 /* jsb_ext_create_apis.js */; };
 		19485733194CD9610032B168 /* bundled-scripts.js in Sources */ = {isa = PBXBuildFile; fileRef = 19485732194CD9610032B168 /* bundled-scripts.js */; };
-		19485734194CD9610032B168 /* bundled-scripts.js in Sources */ = {isa = PBXBuildFile; fileRef = 19485732194CD9610032B168 /* bundled-scripts.js */; };
 		19485735194CD9770032B168 /* bundled-scripts.js in Resources */ = {isa = PBXBuildFile; fileRef = 19485732194CD9610032B168 /* bundled-scripts.js */; };
 		19485736194CD9770032B168 /* jsb_ext_create_apis.js in Resources */ = {isa = PBXBuildFile; fileRef = 1948572F194CD9490032B168 /* jsb_ext_create_apis.js */; };
 		1A676829180E9C060076BC67 /* libchipmunk Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB4C180E9ACB004C840B /* libchipmunk Mac.a */; };
@@ -837,8 +835,6 @@
 			files = (
 				509D4A8117EBB24E00697056 /* AppDelegate.cpp in Sources */,
 				C06E23CC18CEFE680093C81A /* main.cpp in Sources */,
-				19485731194CD9490032B168 /* jsb_ext_create_apis.js in Sources */,
-				19485734194CD9610032B168 /* bundled-scripts.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -929,7 +925,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../js-bindings/cocos2d-x/cocos/2d/platform/mac $(SRCROOT)/../../js-bindings/cocos2d-x/external/glfw3/include/mac $(SRCROOT)/../../js-bindings/external/spidermonkey/include/mac";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../js-bindings/cocos2d-x/cocos/2d/platform/mac $(SRCROOT)/../../js-bindings/cocos2d-x/external/glfw3/include/mac $(SRCROOT)/../../js-bindings/external/spidermonkey/include/mac $(SRCROOT)/../../js-bindings/cocos2d-x/cocos/platform/mac";
 			};
 			name = Debug;
 		};
@@ -950,7 +946,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../js-bindings/cocos2d-x/cocos/2d/platform/mac $(SRCROOT)/../../js-bindings/cocos2d-x/external/glfw3/include/mac $(SRCROOT)/../../js-bindings/external/spidermonkey/include/mac";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../js-bindings/cocos2d-x/cocos/2d/platform/mac $(SRCROOT)/../../js-bindings/cocos2d-x/external/glfw3/include/mac $(SRCROOT)/../../js-bindings/external/spidermonkey/include/mac $(SRCROOT)/../../js-bindings/cocos2d-x/cocos/platform/mac";
 			};
 			name = Release;
 		};
